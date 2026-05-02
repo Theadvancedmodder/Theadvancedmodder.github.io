@@ -72,33 +72,6 @@
     /* MOCK MENU */
     .menu-showcase { width:100%; max-width:720px; animation:fadeUp .9s ease .2s both; }
     .menu-frame { position:relative; border:1px solid rgba(0,245,255,.2); border-radius:8px; overflow:hidden; box-shadow:0 0 40px rgba(0,245,255,.08),0 0 80px rgba(180,0,255,.08),inset 0 0 30px rgba(0,245,255,.03); }
-    .fake-menu { width:100%; background:linear-gradient(160deg,#08081a 0%,#0d0520 60%,#06101a 100%); cursor:default; user-select:none; }
-    .mock-ui { padding:32px 28px; font-family:'Orbitron',monospace; }
-    .mock-header { display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(0,245,255,.15); padding-bottom:14px; margin-bottom:20px; }
-    .mock-logo { font-size:14px; font-weight:700; letter-spacing:3px; background:linear-gradient(90deg,var(--cyan),var(--purple)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; display:flex; align-items:center; gap:7px; }
-    .mock-logo svg { width:14px; height:14px; flex-shrink:0; }
-    .mock-ver { font-size:9px; color:rgba(0,245,255,.4); letter-spacing:2px; display:flex; align-items:center; gap:5px; }
-    .mock-ver svg { width:9px; height:9px; opacity:.5; }
-    .mock-tabs { display:flex; gap:4px; margin-bottom:20px; }
-    .mock-tab { font-size:9px; letter-spacing:2px; padding:6px 14px; border:1px solid rgba(0,245,255,.15); color:rgba(200,200,255,.4); cursor:default; }
-    .mock-tab.active { border-color:var(--cyan); color:var(--cyan); background:rgba(0,245,255,.08); box-shadow:0 0 12px rgba(0,245,255,.2); }
-    .mock-options { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:20px; }
-    .mock-option { display:flex; justify-content:space-between; align-items:center; padding:10px 14px; background:rgba(0,245,255,.03); border:1px solid rgba(0,245,255,.08); }
-    .mock-option-label { font-size:9px; letter-spacing:1.5px; color:rgba(200,200,255,.7); }
-    .mock-toggle { width:28px; height:14px; border-radius:7px; position:relative; }
-    .mock-toggle.on { background:linear-gradient(90deg,var(--cyan),var(--purple)); box-shadow:0 0 8px rgba(0,245,255,.5); }
-    .mock-toggle.off { background:rgba(100,100,150,.3); border:1px solid rgba(100,100,150,.3); }
-    .mock-toggle::after { content:''; position:absolute; width:10px; height:10px; background:white; border-radius:50%; top:2px; }
-    .mock-toggle.on::after { right:2px; } .mock-toggle.off::after { left:2px; }
-    .mock-slider-row { padding:10px 14px; background:rgba(0,245,255,.03); border:1px solid rgba(0,245,255,.08); margin-bottom:8px; }
-    .mock-slider-label { display:flex; justify-content:space-between; font-size:9px; letter-spacing:1.5px; color:rgba(200,200,255,.7); margin-bottom:6px; }
-    .mock-slider-track { height:3px; background:rgba(100,100,150,.3); border-radius:2px; }
-    .mock-slider-fill { height:100%; border-radius:2px; background:linear-gradient(90deg,var(--cyan),var(--purple)); box-shadow:0 0 6px rgba(0,245,255,.5); }
-    .mock-status { display:flex; justify-content:space-between; align-items:center; border-top:1px solid rgba(0,245,255,.1); padding-top:12px; font-size:8px; letter-spacing:2px; color:rgba(0,245,255,.4); }
-    .mock-status-left { display:flex; align-items:center; gap:6px; }
-    .mock-status-dot { display:inline-block; width:6px; height:6px; border-radius:50%; background:#00ff88; box-shadow:0 0 8px #00ff88; flex-shrink:0; }
-    .mock-status-right { display:flex; align-items:center; gap:5px; }
-    .mock-status-right svg { width:8px; height:8px; opacity:.5; }
 
     /* LOADER */
     .loader-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.93); backdrop-filter:blur(14px); z-index:99; align-items:center; justify-content:center; }
@@ -209,56 +182,7 @@
     <!-- MOCK MENU -->
     <div class="menu-showcase">
       <div class="menu-frame">
-        <div class="fake-menu">
-          <div class="mock-ui">
-            <div class="mock-header">
-              <span class="mock-logo">
-                <svg viewBox="0 0 24 24" fill="none" stroke="url(#logoGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <defs><linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#00f5ff"/><stop offset="100%" stop-color="#b400ff"/></linearGradient></defs>
-                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-                </svg>
-                NEXUS v1.0
-              </span>
-              <span class="mock-ver">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-                BEYOND SANDBOX • INJECTED
-              </span>
-            </div>
-            <div class="mock-tabs">
-              <div class="mock-tab active">PLAYER</div>
-              <div class="mock-tab">WORLD</div>
-              <div class="mock-tab">PHYSICS</div>
-              <div class="mock-tab">VISUALS</div>
-              <div class="mock-tab">MISC</div>
-            </div>
-            <div class="mock-options">
-              <div class="mock-option"><span class="mock-option-label">GODMODE</span><div class="mock-toggle on"></div></div>
-              <div class="mock-option"><span class="mock-option-label">INFINITE AMMO</span><div class="mock-toggle on"></div></div>
-              <div class="mock-option"><span class="mock-option-label">NO CLIP</span><div class="mock-toggle off"></div></div>
-              <div class="mock-option"><span class="mock-option-label">TELEKINESIS+</span><div class="mock-toggle on"></div></div>
-              <div class="mock-option"><span class="mock-option-label">SUPER GRAB</span><div class="mock-toggle on"></div></div>
-              <div class="mock-option"><span class="mock-option-label">FREEZE NPCS</span><div class="mock-toggle off"></div></div>
-            </div>
-            <div class="mock-slider-row">
-              <div class="mock-slider-label"><span>MOVE SPEED</span><span style="color:var(--cyan)">3.8×</span></div>
-              <div class="mock-slider-track"><div class="mock-slider-fill" style="width:65%"></div></div>
-            </div>
-            <div class="mock-slider-row">
-              <div class="mock-slider-label"><span>THROW FORCE</span><span style="color:var(--purple)">MAX</span></div>
-              <div class="mock-slider-track"><div class="mock-slider-fill" style="width:90%"></div></div>
-            </div>
-            <div class="mock-status">
-              <span class="mock-status-left">
-                <span class="mock-status-dot"></span>
-                ACTIVE • UNDETECTED
-              </span>
-              <span class="mock-status-right">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                FPS: 90 • LATENCY: 2ms
-              </span>
-            </div>
-          </div>
-        </div>
+        <img src="image.png" alt="NEXUS Mod Menu" style="width:100%; display:block; border-radius:8px;"/>
       </div>
     </div>
 
